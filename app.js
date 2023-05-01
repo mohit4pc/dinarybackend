@@ -13,12 +13,7 @@ const JobTypesRoute = require("./routes/jobsTypeRoutes");
 const jobRoutes = require("./routes/jobsRoutes")
 // MongoDb Connecting
 mongoose
-    .connect(process.env.DATABASE, {
-        userNewUrlParser: true,
-        useUnifiedTopology: true,
-        useCreateIndex: true,
-        useFindAndModify: false,
-    })
+    .connect(process.env.DATABASE})
     .then(() => {
         console.log("DataBase Connected SuccessFully");
     })
